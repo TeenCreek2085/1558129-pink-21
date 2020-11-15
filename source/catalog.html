@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+  </head>
+  <body class="page__body">
+    <header class="page-header">
+      <div class="header-top">
+        <a class="page-header__logo" href="#">
+          <img src="https://via.placeholder.com/150x150" width="74" height="23" alt="Мобильное приложение «Pink»">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toogle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#">Главная</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Фотографии</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Конкурс</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#">Html Academy</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="header-title header-title--catalog">
+        <p class="header-title__slogan">Фотографии<br>пользователей</p>
+      </div>
+    </header>
+
+    <main class="page-main">
+      <h1 class="visually-hidden">Фотографии пользователей</h1>
+
+      <section class="page-description page-description--catalog">
+        <div class="page-description__wrapper">
+          <p class="page-description__intro">Взгляните на фотографии,<br> которые выкладывают пользователи!<br> Видите, как не хватает ваших?</p>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="catalog__wrapper">
+          <h2 class="visually-hidden">Записи пользователей</h2>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <img class="catalog__image catalog__image--of-the-day" src="https://via.placeholder.com/150x150" width="320" height="137" alt="">
+              <blockquote class="catalog__review">
+                <h3 class="catalog__author">Анна</h3>
+                <span class="catalog__time">(5 минут назад)</span>
+                <p class="catalog__text">Прыгать или нет? Напишите в<br> комментарии свой совет и<br> смотрите прямую трансляцию в<br> перископе, задавайте свои вопросы!</p>
+                <span class="catalog__like">Нравится: 215</span>
+              </blockquote>
+            </li>
+            <li class="catalog__item">
+              <img class="catalog__image" src="https://via.placeholder.com/150x150" width="280" height="180" alt="">
+              <blockquote class="catalog__review">
+                <h3 class="catalog__author">Левон</h3>
+                <span class="catalog__time">(5 часов назад)</span>
+                <p class="catalog__text">Вчера он на луну летал, сегодня в<br> руки к нам попал</p>
+                <span class="catalog__like">Нравится: 356</span>
+              </blockquote>
+            </li>
+            <li class="catalog__item">
+              <img class="catalog__image" src="https://via.placeholder.com/150x150" width="280" height="180" alt="">
+              <blockquote class="catalog__review">
+                <h3 class="catalog__author">Антон</h3>
+                <span class="catalog__time">(12 часов назад)</span>
+                <p class="catalog__text">Соседи будут рады!</p>
+                <span class="catalog__like">Нравится: 666</span>
+              </blockquote>
+            </li>
+            <li class="catalog__item">
+              <img class="catalog__image" src="https://via.placeholder.com/150x150" width="280" height="180" alt="">
+              <blockquote class="catalog__review">
+                <h3 class="catalog__author">Борис</h3>
+                <span class="catalog__time">(20 часов назад)</span>
+                <p class="catalog__text">Здесь могла быть ваша цитата о<br> высоком и вечном</p>
+                <span class="catalog__like">Нравится: 215</span>
+              </blockquote>
+            </li>
+            <li class="catalog__item">
+              <img class="catalog__image" src="https://via.placeholder.com/150x150" width="280" height="180" alt="">
+              <blockquote class="catalog__review">
+                <h3 class="catalog__author">Сергей</h3>
+                <span class="catalog__time">(25 часов назад)</span>
+                <p class="catalog__text">Самая кубанская в мире!</p>
+                <span class="catalog__like">Нравится: 4</span>
+              </blockquote>
+            </li>
+            <li class="catalog__item">
+              <img class="catalog__image" src="https://via.placeholder.com/150x150" width="280" height="180" alt="">
+              <blockquote class="catalog__review">
+                <h3 class="catalog__author">Максим</h3>
+                <span class="catalog__time">(40 часов назад)</span>
+                <p class="catalog__text">Где снег-то?</p>
+                <span class="catalog__like">Нравится: 150</span>
+              </blockquote>
+            </li>
+            <li class="catalog__item">
+              <img class="catalog__image" src="https://via.placeholder.com/150x150" width="280" height="180" alt="">
+              <blockquote class="catalog__review">
+                <h3 class="catalog__author">Надежда</h3>
+                <span class="catalog__time">(45 часов назад)</span>
+                <p class="catalog__text">Всем GM и взаимные лайки!</p>
+                <span class="catalog__like">Нравится: 2560</span>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="filter">
+        <div class="filter__wrapper">
+          <h2 class="visually-hidden">Фильтр фотографий</h2>
+
+          <p class="filter__intro">Затмите их всех!<br> Выкладывайте все, что накопилось в<br> телефоне!</p>
+          <form action="https://echo.htmlacademy.ru" method="POST">
+            <label class="filter__image">
+              <img class="filter__image-current" src="https://via.placeholder.com/150x150" width="280" height="374" alt="">
+              <input class="visually-hidden" type="file">
+            </label>
+
+            <div class="filter__e">
+              <ul class="filter__list">
+                <li class="filter__item">
+                  <button class="filter__button" type="button"></button>
+                </li>
+                <li class="filter__item">
+                  <button class="filter__button" type="button"></button>
+                </li>
+                <li class="filter__item">
+                  <button class="filter__button" type="button"></button>
+                </li>
+              </ul>
+              <ul class="filter__range-list">
+                <li class="filter__range-item">
+                  <input type="range">
+                </li>
+                <li class="filter__range-item">
+                  <input type="range">
+                </li>
+                <li class="filter__range-item">
+                  <input type="range">
+                </li>
+              </ul>
+
+              <button class="filter__button-submit" type="submit"></button>
+              <button class="filter__button-cancel" type="reset"></button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <a href="#">
+            <img src="https://via.placeholder.com/150x150" width="145" height="40" alt="Мобильное приложение «Pink»">
+          </a>
+        </div>
+
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--twitter" href="#">Twitter</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#">Facebook</a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="#">Youtube</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__copyright copyright">
+          <b class="copyright__text">Разработано</b>
+          <a class="copyright__link" href="#">
+            <img src="https://via.placeholder.com/150x150" width="27" height="34" alt="Автор сайта HTML Academy">
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
