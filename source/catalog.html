@@ -154,10 +154,10 @@
           <h2 class="visually-hidden">Фильтр фотографий</h2>
 
           <p class="filter__intro">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-          <form action="https://echo.htmlacademy.ru" method="POST">
+          <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="filter__left">
-              <input class="visually-hidden" type="file" id="">
-              <label class="filter__image" for="">
+              <input class="visually-hidden" type="file" id="filter-image">
+              <label class="filter__image" for="filter-image">
                 <img class="filter__image-current" src="https://via.placeholder.com/150x150" width="280" height="374" alt="">
               </label>
             </div>
@@ -165,22 +165,22 @@
             <div class="filter__right">
               <ul class="filter__list">
                 <li class="filter__item">
-                  <input type="range" id="">
-                  <label for=""></label>
+                  <input type="range" id="slider-crop">
+                  <label for="slider-crop">Crop</label>
                 </li>
                 <li class="filter__item">
-                  <input type="range" id="">
-                  <label for=""></label>
+                  <input type="range" id="slider-fill">
+                  <label for="slider-fill">Fill</label>
                 </li>
                 <li class="filter__item">
-                  <input type="range" id="">
-                  <label for=""></label>
+                  <input type="range" id="slider-contrast">
+                  <label for="slider-contrast">Contrast</label>
                 </li>
               </ul>
 
               <div class="filter__buttons">
-                <button class="filter__button-submit" type="submit"></button>
-                <button class="filter__button-cancel" type="reset"></button>
+                <button class="filter__button-submit filter__button" type="submit">Запостить</button>
+                <button class="filter__button-cancel filter__button" type="reset">Отмена</button>
               </div>
             </div>
           </form>
