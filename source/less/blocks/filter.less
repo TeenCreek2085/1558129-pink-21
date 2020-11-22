@@ -8,14 +8,22 @@
 }
 
 .filter__form {
+  margin-bottom: 15px;
   background-color: @gray;
 }
 
 .filter__list {
   padding: 0;
+  list-style: none;
+}
+
+.filter__buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .filter__button {
+  margin-bottom: 20px;
   font-family: inherit;
   font-weight: bold;
   font-size: 18px;
@@ -33,4 +41,18 @@
   color: @blue;
   border: 3px solid @blue;
   opacity: 0.1;
+}
+
+@media (min-width: @tablet) {
+  .filter__form {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: @desktop) {
+  .filter__buttons {
+    flex-direction: row;
+    column-gap: 15px;
+  }
 }
