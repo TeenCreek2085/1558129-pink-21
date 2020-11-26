@@ -32,7 +32,7 @@
   margin: 0 auto;
 }
 
-@media (min-width: @tablet) {
+@media (min-width: @tablet-width) {
   .features__list {
     display: flex;
     flex-direction: column;
@@ -46,12 +46,12 @@
 
   .features__image {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
   }
 }
 
-@media (min-width: @desktop) {
+@media (min-width: @desktop-width) {
   .features__image {
     display: block;
     position: initial;
@@ -60,12 +60,18 @@
 
   .features__list {
     flex-direction: row;
+    text-align: center;
   }
 
   .features__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 0;
+  }
+
+  .features__item:not(:last-child) {
+    margin-right: 65px;
   }
 
   .features__title {
