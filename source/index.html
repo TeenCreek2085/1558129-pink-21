@@ -10,10 +10,10 @@
     <header class="page-header">
       <div class="header-top">
         <a class="header-top__logo">
-          <img src="https://via.placeholder.com/150x150" width="74" height="23" alt="Мобильное приложение «Pink»">
+          <img srcset="../img/pink-logo-mobile.svg" width="74" height="23" alt="Мобильное приложение «Pink»">
         </a>
-        <nav class="main-nav">
-          <button class="main-nav__toogle" type="button">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <div class="main-nav__wrapper">
@@ -28,24 +28,26 @@
                 <a href="form.html">Конкурс</a>
               </li>
               <li class="main-nav__item">
-                <a href="#">Html Academy</a>
+                <a href="#">HTML Academy</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
 
-      <div class="header-title header-title--home">
-        <p class="header-title__slogan">Взгляните на жизнь иначе!</p>
-      </div>
+      <div class="page-header__wrapper">
+        <div class="header-title header-title--home">
+          <p class="header-title__slogan">Взгляните на жизнь иначе!</p>
+        </div>
 
-      <div class="header-image">
-        <img src="https://via.placeholder.com/150x150" width="320" height="286" alt="Взгляд на жизнь сквозь фильтр">
-      </div>
+        <div class="header-image">
+          <img src="../img/phone-mobile.png" width="320" height="286" alt="Взгляд на жизнь сквозь фильтр">
+        </div>
 
-      <div class="header-download">
-        <button class="header-download__button" type="button">Скачать приложение</button>
-        <p class="header-download__intro">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        <div class="header-download">
+          <button class="header-download__button" type="button">Скачать приложение</button>
+          <p class="header-download__intro">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
       </div>
     </header>
 
@@ -69,17 +71,17 @@
             <li class="features__item">
               <h3 class="features__title">Поднимает настроение</h3>
               <p class="features__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              <img class="features__image" src="https://via.placeholder.com/150x150" width="136" height="245" alt="">
+              <img class="features__image" src="https://via.placeholder.com/150x150" width="157" height="320" alt="">
             </li>
             <li class="features__item">
               <h3 class="features__title">Меняет мир вокруг</h3>
               <p class="features__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-              <img class="features__image" src="https://via.placeholder.com/150x150" width="136" height="245" alt="">
+              <img class="features__image" src="https://via.placeholder.com/150x150" width="157" height="320" alt="">
             </li>
             <li class="features__item">
               <h3 class="features__title">Заводит новых друзей</h3>
               <p class="features__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-              <img class="features__image" src="https://via.placeholder.com/150x150" width="136" height="245" alt="">
+              <img class="features__image" src="https://via.placeholder.com/150x150" width="157" height="320" alt="">
             </li>
           </ul>
         </div>
@@ -101,7 +103,7 @@
       </section>
 
       <section class="reviews">
-        <div class="reviews__wrapper slider">
+        <div class="reviews__wrapper container slider">
           <h2 class="visually-hidden">Отзывы о нас</h2>
 
           <div class="reviews__slider-wrapper slider__wrapper">
@@ -139,7 +141,7 @@
       </section>
 
       <section class="price">
-        <div class="price__wrapper slider">
+        <div class="price__wrapper container slider">
           <h2 class="visually-hidden">Стоимость пакетов услуг</h2>
 
           <div class="price__slider-wrapper">
@@ -235,5 +237,22 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      let navMain = document.querySelector('.main-nav');
+      let navToggle = document.querySelector('.main-nav__toggle');
+
+      navMain.classList.remove('main-nav--nojs');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
   </body>
 </html>

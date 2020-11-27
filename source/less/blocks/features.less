@@ -33,6 +33,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .features {
+    margin-bottom: 55px;
+  }
+
   .features__list {
     display: flex;
     flex-direction: column;
@@ -60,6 +64,7 @@
 
   .features__list {
     flex-direction: row;
+    column-gap: 50px;
     text-align: center;
   }
 
@@ -70,15 +75,15 @@
     margin-left: 0;
   }
 
-  .features__item:not(:last-child) {
-    margin-right: 65px;
-  }
-
   .features__title {
+    font-size: 30px;
+    line-height: 30px;
     order: 2;
   }
 
   .features__description {
+    font-size: 18px;
+    line-height: 30px;
     order: 3;
   }
 }

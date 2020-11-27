@@ -1,26 +1,31 @@
+.header-download {
+  position: relative;
+  background-color: @dark-blue;
+  padding-top: 48px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+    background-color: unset;
+  }
+}
+
 .header-download__button {
   background-color: inherit;
   color: @basic-white;
-  padding: 21px 39px 21px 38px;
+  padding: 21px 35px;
+  margin-bottom: 116px;
   font-family: inherit;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   border: 3px solid @basic-white;
   border-radius: 29px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
-  }
 }
 
 .header-download__intro {
   color: @basic-white;
+  padding-bottom: 38px;
   font-weight: lighter;
   font-size: 14px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
-    max-width: 50%;
-  }
 }

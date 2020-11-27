@@ -1,9 +1,23 @@
 .header-top {
+  background-color: fade(@blue, 100%);
+
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: fade(@blue, 30%);
+  }
+}
+
+.header-top__logo img {
+  margin-top: 20px;
+  margin-bottom: 21px;
+  margin-left: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 130px;
   }
 }
