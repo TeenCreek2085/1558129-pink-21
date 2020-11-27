@@ -2,13 +2,25 @@
   margin: 0 auto;
 }
 
+.form__info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
 .form__user-info {
   border-style: none;
+  order: 1;
 }
 
 .form__info-list {
   padding: 0;
   list-style-type: none;
+}
+
+.form__info-item {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__info-name {
@@ -31,8 +43,10 @@
 }
 
 .form__achievement {
+  margin-bottom: 15px;
   background-color: @gray;
   border-style: none;
+  order: 2;
 }
 
 .form__achievement-list {
@@ -45,7 +59,13 @@
 }
 
 .form__contacts {
+  margin-bottom: 15px;
   border-style: none;
+  order: 3;
+}
+
+.form__title--contacts {
+  display: none;
 }
 
 .form__contacts-list {
@@ -66,8 +86,10 @@
 }
 
 .form__os {
+  margin-bottom: 15px;
   border-style: none;
   background-color: @gray;
+  order: 4;
 }
 
 .form__os-list {
@@ -81,15 +103,20 @@
 
 .form__comment {
   border-style: none;
+  order: 5;
 }
 
 .form__comment-item {
   border: 2px solid @dark-gray;
   border-radius: 1px;
-  min-width: 276px;
-  max-width: 469px;
-  min-height: 197px;
-  max-height: 250px;
+  width: 276px;
+  height: 197px;
+}
+
+.form__button-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .form__button {
@@ -113,4 +140,70 @@
 
 .star {
   color: @pink;
+}
+
+@media (min-width: @tablet-width) {
+  .form__info-item {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .form__info-name {
+    margin-right: 10px;
+  }
+
+  .form__achievement,
+  .form__contacts,
+  .form__os,
+  .form__comment {
+    border: 2px solid @dark-gray;
+    border-radius: 1px;
+  }
+
+  .form__comment-item {
+    width: 496px;
+    height: 189px;
+  }
+
+  .form__title--contacts {
+    display: block;
+  }
+
+  .form__button-box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form__achievement {
+    background-color: unset;
+    order: 4;
+  }
+
+  .form__os {
+    background-color: unset;
+    order: 2;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__info {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .form__contacts-list {
+    display: flex;
+  }
+
+  .form__contacts-info {
+    margin-left: 70px;
+  }
+
+  .form__achievement-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+  }
 }
