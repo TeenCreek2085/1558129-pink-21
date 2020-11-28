@@ -2,11 +2,20 @@
   margin: 0 auto;
 }
 
-.page-description__intro {
+.page-description__intro p {
+  margin-top: 40px;
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
+}
+
+.page-description__intro p:last-child {
+  margin-top: 0;
+}
+
+.page-description--home {
+  margin-bottom: 65px;
 }
 
 .page-description--home p {
@@ -15,6 +24,13 @@
   line-height: 28.8px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 0;
     line-height: 54.47px;
+    font-size: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    line-height: 68.09px;
+    font-size: 50px;
   }
 }
