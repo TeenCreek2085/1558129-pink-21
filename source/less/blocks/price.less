@@ -21,6 +21,7 @@
 }
 
 .price__title {
+  padding-top: 10px;
   color: @basic-white;
   background-color: @blue;
   font-weight: bold;
@@ -31,8 +32,13 @@
   border-radius: 0 0 0 1px;
 }
 
+.price__title:last-child {
+  border-right: none;
+}
+
 .price__cost {
   display: block;
+  padding-bottom: 10px;
   font-weight: lighter;
   font-size: 18px;
 }
@@ -41,11 +47,8 @@
   background-color: @basic-white;
 }
 
-.price__info td {
-  padding-left: 20px;
-}
-
 .price__name {
+  padding: 10px 0 10px 20px;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
@@ -55,6 +58,7 @@
 
 .price__kit {
   border: 2px solid @dark-gray;
+  border-top: none;
   border-radius: 0 0 0 1px;
   text-align: center;
 }
@@ -90,7 +94,6 @@
     border: 0;
   }
 
-  .price__table thead,
   .price__table .price__name {
     border: none;
     clip: rect(0 0 0 0);
@@ -104,12 +107,14 @@
 
   .price__table tr {
     display: block;
-    margin-bottom: 30px;
+    // margin-bottom: 30px;
     text-align: center;
   }
 
   .price__table td {
     display: block;
+    text-align: right;
+    padding-right: 30px;
   }
 
   .price__table td::before {
@@ -117,11 +122,35 @@
     float: left;
   }
 
-  .price__info::before {
-    content: attr(data-label);
+  // .price__info::before {
+  //   content: attr(data-label);
+  // }
+
+  .price__kit {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
   }
 
-  .price__table td:last-child {
-    border-bottom: 0;
+  .price__cell {
+    position: relative;
+  }
+
+  .slider__price-item > td {
+    display: none;
+  }
+
+  .slider__price-title {
+    display: none;
+  }
+
+  .slider__price-item--current {
+    display: block;
+  }
+
+  .slider__price-title--current {
+    display: block;
+    border: 2px solid @gray;
+    width: 99%;
   }
 }

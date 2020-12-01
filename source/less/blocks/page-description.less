@@ -1,16 +1,20 @@
+.page-description p {
+  margin-top: 45px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+}
+
 .page-description__wrapper {
   margin: 0 auto;
 }
 
-.page-description__intro p {
-  margin-top: 40px;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 30px;
-  text-align: center;
-}
-
-.page-description__intro p:last-child {
+.page-description--home p:last-child {
   margin-top: 0;
 }
 
@@ -19,7 +23,8 @@
 }
 
 .page-description--home p {
-  font-weight: lighter;
+  margin-top: 40px;
+  text-align: center;
   font-size: 24px;
   line-height: 28.8px;
 

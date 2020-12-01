@@ -1,14 +1,11 @@
 .features {
-  padding-top: 30px;
+  padding-top: 50px;
   background-color: @gray;
-}
-
-.features__wrapper {
-  margin: 0 auto;
 }
 
 .features__list {
   padding: 0;
+  margin: 0;
   text-align: center;
   list-style-type: none;
 }
@@ -68,21 +65,28 @@
     display: block;
     position: initial;
     order: 1;
-    background-size: 157px 320px;
+  }
+
+  .features__item:last-child img {
+    margin: 0;
   }
 
   .features__list {
     flex-direction: row;
     text-align: center;
+    column-gap: 10px;
+    align-content: center;
   }
 
   .features__item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 33.33%;
   }
 
   .features__title {
+    margin-bottom: 35px;
     font-size: 30px;
     line-height: 30px;
     order: 2;

@@ -1,7 +1,7 @@
 .header-download {
   position: relative;
   background-color: @dark-blue;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
 
@@ -19,8 +19,8 @@
 .header-download__button {
   background-color: transparent;
   color: @basic-white;
-  padding: 21px 39px 21px 38px;
-  margin-bottom: 110px;
+  padding: 15px 39px 15px 38px;
+  margin-bottom: 108px;
   font-family: inherit;
   font-weight: bold;
   font-size: 18px;
@@ -44,15 +44,19 @@
 }
 
 .header-download__intro {
-  max-width: 95%;
-  margin: 0;
+  max-width: 80%;
+  margin: 0 auto;
   text-align: center;
   color: @basic-white;
   font-weight: lighter;
   font-size: 14px;
 
   @media (min-width: @tablet-width) {
-    // max-width: 50%;
+    max-width: 90%;
     font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 95%;
   }
 }
