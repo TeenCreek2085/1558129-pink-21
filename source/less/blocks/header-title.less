@@ -1,5 +1,6 @@
 .header-title {
   margin-bottom: 84px;
+  margin-top: 29px;
   color: @basic-white;
   font-weight: lighter;
   font-size: 24px;
@@ -13,21 +14,26 @@
 
   &--home {
     position: relative;
-    max-width: 80%;
     line-height: 28.8px;
     margin-bottom: 25px;
 
     @media (min-width: @tablet-width) {
-      max-width: 40%;
+      max-width: 50%;
       font-size: 40px;
       line-height: 48px;
     }
 
     @media (min-width: @desktop-width) {
+      max-width: 45%;
       font-size: 50px;
       line-height: 68.09px;
     }
   }
+}
+
+.header-title--home .header-title__slogan {
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .header-title__slogan {
