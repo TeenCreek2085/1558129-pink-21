@@ -20,13 +20,24 @@
 }
 
 .catalog__box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
 
+.catalog__image {
+  display: block;
+}
+
 .catalog__review {
-  margin-top: -6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
   padding-left: 17px;
+  padding-right: 17px;
   background-color: @gray;
 }
 
