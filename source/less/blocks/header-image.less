@@ -1,12 +1,5 @@
 .header-image img {
-  background-image: url("../img/screen-mobile.png");
-  background-repeat: no-repeat;
-  background-size: 111px 197px;
-  background-position: 105px 33px;
-  transform: translateY(5px);
-
   @media (min-width: @tablet-width) {
-    transform: translateY(0);
     position: absolute;
     bottom: 0;
     right: 0;
@@ -15,4 +8,21 @@
   @media (min-width: @desktop-width) {
     right: 10%;
   }
+}
+
+
+@media (min-width: @tablet-width) {
+  .header-image img {
+    width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header-image img {
+    width: 780px;
+  }
+}
+
+.page-header__wrapper {
+  position: relative;
 }

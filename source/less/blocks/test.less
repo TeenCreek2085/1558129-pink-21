@@ -1,14 +1,18 @@
-.test__wrapper {
+.test__item {
   display: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     column-gap: 72px;
   }
 }
 
 @media (min-width: @tablet-width) {
+  .test__box {
+    text-align: left;
+  }
+
   .test__title {
     padding: 0;
     margin: 0;
@@ -32,6 +36,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .test__item img {
+    width: 298px;
+    height: 345px;
+  }
+
   .test__title {
     margin-bottom: 37px;
     line-height: 30px;

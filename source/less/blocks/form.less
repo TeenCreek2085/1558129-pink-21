@@ -37,7 +37,6 @@
 
 .form__info-item input {
   padding: 15px 0 15px 20px;
-  // width: 100%;
   border: 2px solid @dark-gray;
   border-radius: 1px;
   font-size: 18px;
@@ -50,6 +49,11 @@
   line-height: 18px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+    line-height: 30px;
+  }
 }
 
 .form__achievement {
@@ -65,12 +69,69 @@
 }
 
 .form__achievement-item {
-  margin-left: 20px;
+  position: relative;
   margin-bottom: 20px;
 }
 
 .form__achievement-info {
+  padding-left: 60px;
   line-height: 30px;
+}
+
+.form__input {
+  position: absolute;
+  appearance: none;
+}
+
+.form__checkbox {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: 0;
+  margin-left: 0;
+  width: 35px;
+  height: 35px;
+  border: 2px solid @dark-gray;
+  border-radius: 1px;
+  background-color: @basic-white;
+}
+
+.form__input:checked + .form__checkbox {
+  background-image: url("../img/tick.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form__input:focus + .form__checkbox {
+  outline: @basic-black solid 2px;
+}
+
+.form__radio {
+  position: absolute;
+  appearance: none;
+}
+
+.form__radio-box {
+  position: absolute;
+  content: "";
+  top: -2px;
+  left: 0;
+  margin-left: 0;
+  width: 37px;
+  height: 37px;
+  border: 2px solid @dark-gray;
+  border-radius: 50%;
+  background-color: @basic-white;
+}
+
+.form__radio:checked + .form__radio-box {
+  background-image: url("../img/ellipse.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form__radio:focus + .form__radio-box {
+  outline: @basic-black solid 2px;
 }
 
 .form__contacts {
@@ -107,8 +168,7 @@
 }
 
 .form__contacts-item input {
-  padding: 15px 0 15px 20px;
-  // width: 100%;
+  padding: 13px 0 13px 20px;
   border: 2px solid @dark-gray;
   border-radius: 1px;
   font-size: 18px;
@@ -122,39 +182,44 @@
   order: 4;
 }
 
-
 .form__os-list {
   padding: 0;
   list-style-type: none;
 }
 
 .form__os-item {
+  position: relative;
   margin-bottom: 20px;
 }
 
 .form__os-info {
+  padding-left: 50px;
   line-height: 30px;
 }
 
 .form__comment {
   display: flex;
   justify-content: space-around;
-
-
   border-style: none;
   order: 5;
 }
 
 .form__comment-item {
+  display: block;
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 30px;
   text-align: center;
   border: 2px solid @dark-gray;
   border-radius: 1px;
-  width: 276px;
-  height: 197px;
+  max-width: 276px;
+  min-width: 276px;
+  min-height: 197px;
+  max-height: 197px;
 }
 
-.form__comment-item ::placeholder {
-  text-align: center;
+.form__comment-item::placeholder {
+  color: @blue;
 }
 
 .form__button-box {
@@ -178,19 +243,14 @@
   border-radius: 1px;
 }
 
-.form__legend {
-  font-size: 14px;
-  line-height: 30px;
-  text-transform: uppercase;
-}
-
 .star {
   color: @pink;
 }
 
 @media (max-width: @only-mobile-width) {
   .form__user-info,
-  .form__contacts {
+  .form__contacts,
+  .form__comment {
     padding: 0;
   }
 }
@@ -200,9 +260,17 @@
     margin-top: 40px;
   }
 
+  .form__title {
+    padding: 0 20px;
+  }
+
   .form__user-info {
     padding: 0;
     order: 1;
+  }
+
+  .form__achievement-list {
+    margin-left: 20px;
   }
 
   .form__info-item {
@@ -251,6 +319,29 @@
   .form__contacts-item {
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      content: "";
+      width: 59px;
+      height: 59px;
+      background-color: @dark-gray;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--mail::after {
+      background-image: url("../img/mail-icon.svg");
+      background-size: 18px 13px;
+    }
+
+    &--tel::after {
+      background-image: url("../img/phone-icon.svg");
+      background-size: 20px 19px;
+    }
   }
 
   .form__contacts-info {
@@ -258,7 +349,7 @@
     order: 2;
   }
 
-  .form__contacts-item ::placeholder {
+  .form__contacts-item::placeholder {
     font-size: 18px;
     line-height: 30px;
   }
@@ -285,12 +376,14 @@
 
   .form__comment-item {
     margin: 40px 30px;
+    max-width: 496px;
     min-width: 496px;
-    height: 189px;
+    min-height: 189px;
+    max-height: 189px;
   }
 
   .form__comment-item::placeholder {
-    padding-top: 10px;
+    padding: 0;
     color: @blue;
     font-size: 18px;
     line-height: 30px;
@@ -307,9 +400,19 @@
 
 @media (min-width: @desktop-width) {
   .form__info {
+    margin-top: 20px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .form__user-info {
+    margin-top: 0;
+  }
+
+  .form__os {
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 
   .form__contacts {
@@ -322,19 +425,38 @@
     column-gap: 50px;
   }
 
+  .form__achievement {
+    width: 100%;
+    padding: 0;
+  }
+
   .form__achievement-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     justify-content: space-around;
-    flex-wrap: wrap;
   }
 
   .form__achievement-item {
-    flex-grow: 1;
-    margin-left: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .form__achievement-info {
+    padding: 0;
+    margin: 0;
+  }
+
+  .form__checkbox {
+    margin-left: -45px;
   }
 
   .form__comment-item {
-    width: 615px;
-    height: 124px;
+    max-width: 620px;
+    min-width: 620px;
+    min-height: 124px;
+    max-height: 124px;
   }
 }
