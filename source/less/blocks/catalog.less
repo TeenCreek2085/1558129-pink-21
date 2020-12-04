@@ -61,7 +61,41 @@
 }
 
 .catalog__like {
-  padding-bottom: 10px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  column-gap: 18px;
+  margin-bottom: 10px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: space-between;
+  }
+}
+
+.catalog__button {
+  border: none;
+  position: relative;
+  width: 13px;
+  height: 12px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 13px;
+    height: 12px;
+    background-image: url("../img/heart.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+}
+
+.catalog__like-info {
   color: @pink;
   font-size: 12px;
   text-transform: uppercase;
