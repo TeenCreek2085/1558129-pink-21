@@ -1,16 +1,27 @@
 .price {
   background-color: @gray;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  margin-top: 30px;
 }
 
 .price__wrapper {
   margin: 0 auto;
 }
 
+.price__toggles {
+  text-align: center;
+}
+
 .price__table {
+  margin-bottom: 30px;
   border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
 }
 
 .price__title {
+  padding-top: 10px;
   color: @basic-white;
   background-color: @blue;
   font-weight: bold;
@@ -21,7 +32,13 @@
   border-radius: 0 0 0 1px;
 }
 
+.price__title:last-child {
+  border-right: none;
+}
+
 .price__cost {
+  display: block;
+  padding-bottom: 10px;
   font-weight: lighter;
   font-size: 18px;
 }
@@ -31,6 +48,7 @@
 }
 
 .price__name {
+  padding: 10px 0 10px 20px;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
@@ -40,11 +58,99 @@
 
 .price__kit {
   border: 2px solid @dark-gray;
+  border-top: none;
   border-radius: 0 0 0 1px;
+  text-align: center;
 }
 
 @media (min-width: @tablet-width) {
+  .price__name {
+    text-transform: initial;
+  }
+
   .price__toggles {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price__title {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .price__cost {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .price__name {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: @only-mobile-width) {
+  .price__table {
+    border: 0;
+  }
+
+  .price__table .price__name {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .price__table tr {
+    display: block;
+    // margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .price__table td {
+    display: block;
+    text-align: right;
+    padding-right: 30px;
+  }
+
+  .price__table td::before {
+    content: attr(data-label);
+    float: left;
+  }
+
+  // .price__info::before {
+  //   content: attr(data-label);
+  // }
+
+  .price__kit {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+  }
+
+  .price__cell {
+    position: relative;
+  }
+
+  .slider__price-item > td {
+    display: none;
+  }
+
+  .slider__price-title {
+    display: none;
+  }
+
+  .slider__price-item--current {
+    display: block;
+  }
+
+  .slider__price-title--current {
+    display: block;
+    border: 2px solid @gray;
+    width: 99%;
   }
 }

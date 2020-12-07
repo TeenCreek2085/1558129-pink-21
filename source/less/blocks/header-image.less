@@ -1,19 +1,21 @@
-.header-image {
-  margin-bottom: 50px;
-
+.header-image img {
   @media (min-width: @tablet-width) {
     position: absolute;
+    bottom: 0;
     right: 0;
-    top: 0;
-  }
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 
   @media (min-width: @desktop-width) {
-    right: 15%;
+    right: 10%;
   }
+}
+
+@media (min-width: @desktop-width) {
+  .header-image img {
+    width: 780px;
+  }
+}
+
+.page-header__wrapper {
+  position: relative;
 }
