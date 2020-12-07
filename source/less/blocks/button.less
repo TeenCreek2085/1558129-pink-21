@@ -1,0 +1,42 @@
+.button {
+  padding: 14px 0 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 30px;
+  outline: none;
+
+  &--submit {
+    color: @pink;
+    border: 3px solid @pink;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: @basic-white;
+      background-color: @pink;
+    }
+
+    &:active {
+      color: fade(@basic-white, 30%);
+    }
+  }
+
+  &--reset {
+    color: fade(@blue, 10%);
+    border-color: fade(@blue, 10%);
+
+    &:hover,
+    &:focus {
+      color: fade(@blue, 30%);
+      border: 3px solid @blue;
+    }
+
+    &:active {
+      color: fade(@basic-white, 30%);
+      border-color: @gray;
+      background-color: fade(@blue, 30%);
+    }
+  }
+}
