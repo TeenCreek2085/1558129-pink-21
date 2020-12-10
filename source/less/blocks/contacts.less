@@ -44,7 +44,14 @@
 
 .contacts__map {
   margin-top: 40px;
+  width: calc(100% + 40px);
+  transform: translateX(-20px);
   text-align: center;
+
+  @media (min-width: @desktop-width) {
+    width: calc(100% + 260px);
+    transform: translateX(-130px);
+  }
 }
 
 @media (min-width: @tablet-width) {
