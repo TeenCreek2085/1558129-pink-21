@@ -24,6 +24,15 @@
     display: flex;
   }
 
+  &__item:first-child &__input-range {
+    z-index: 1;
+  }
+
+  &__item &__input-range:focus,
+  &__item &__input-range:active {
+    z-index: 2;
+  }
+
   &__input-range {
     position: absolute;
     bottom: 0;
@@ -153,11 +162,6 @@
       }
     }
 
-    // &__label-file img {
-    //   width: 300px;
-    //   height: 400px;
-    // }
-
     &__buttons::before {
       display: none;
     }
@@ -203,16 +207,6 @@
     &__button,
     &__button ~ &__button {
       margin: 0;
-    }
-  }
-}
-
-.input-range {
-  @media (max-width: @only-mobile-width) {
-    display: none;
-
-    &--current {
-      display: block;
     }
   }
 }
