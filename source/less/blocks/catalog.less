@@ -39,14 +39,29 @@
     right: 0;
     top: 0;
     background-color: @pink;
-    padding: 13px 20px;
+    padding: 5px 10px;
     color: @basic-white;
+
+    @media (min-width: @tablet-width) {
+      top: 57px;
+    }
   }
 }
 
 .catalog__image img {
   display: block;
   width: 100%;
+}
+
+.catalog__image--of-the-day {
+  width: calc(100% + 40px);
+  transform: translateX(-20px);
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    width: calc(100% + 260px);
+    transform: translateX(-130px);
+  }
 }
 
 .catalog__review {
