@@ -1,5 +1,9 @@
 .social {
   margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .social__list {
@@ -15,6 +19,7 @@
   align-items: center;
   width: 48px;
   height: 48px;
+  fill: @pink;
   border: 3px solid fade(@blue, 10%);
   border-radius: 50%;
 
@@ -23,10 +28,25 @@
   }
 
   &:active {
+    fill: fade(@pink, 30%);
     border-color: fade(@blue, 10%);
   }
-}
 
-.social__link path:active {
-  fill: fade(@pink, 30%);
+  &--twitter {
+    width: 18px;
+    height: 14px;
+    padding: 17px 15px;
+  }
+
+  &--facebook {
+    width: 9px;
+    height: 18px;
+    padding: 15px 19px 15px 20px;
+  }
+
+  &--youtube {
+    width: 15px;
+    height: 13px;
+    padding: 18px 14px 17px 19px;
+  }
 }
