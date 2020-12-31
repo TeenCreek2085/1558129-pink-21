@@ -12,6 +12,31 @@
   }
 }
 
-.page-footer__logo svg {
+.page-footer__svg {
+  color: @pink;
   fill: @blue;
+
+  &:hover {
+    fill: @pink;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: fade(@blue, 70%);
+    color: fade(@pink, 70%);
+  }
+
+  &--tablet {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
 }

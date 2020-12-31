@@ -54,6 +54,18 @@
   text-transform: uppercase;
   padding: 23px 0 23px 0;
   background-color: @special-green;
-  border: 2px solid @special-green;
+  border-color: transparent;
   border-radius: 1px;
+
+  &:hover {
+    background-color: @dark-green;
+  }
+
+  &:active {
+    color: fade(@basic-white, 30%);
+  }
+
+  &:disabled {
+    background-color: @dark-gray;
+  }
 }
