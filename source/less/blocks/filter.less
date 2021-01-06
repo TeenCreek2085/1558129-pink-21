@@ -48,6 +48,51 @@
     svg {
       margin: auto;
       display: block;
+      fill: fade(@blue, 30%);
+
+      &:hover {
+        fill: fade(@blue, 50%);
+      }
+
+      &:active {
+        fill: @pink;
+      }
+    }
+  }
+
+  &__crop {
+    @media (min-width: @tablet-width) {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  &__fill {
+    @media (min-width: @tablet-width) {
+      width: 24px;
+      height: 22px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 48px;
+      height: 43px;
+    }
+  }
+
+  &__contrast {
+    @media (min-width: @tablet-width) {
+      width: 16px;
+      height: 16px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -147,19 +192,12 @@
 
     &__input-range {
       position: relative;
-      margin-left: 30px;
-      left: auto;
+      left: 15px;
       width: 100%;
     }
 
     &__label-range {
       flex-shrink: 0;
-
-      svg {
-        height: 24px;
-        width: 24px;
-        fill: @pink;
-      }
     }
 
     &__buttons::before {
@@ -191,11 +229,6 @@
 
     &__item:last-child::before {
       display: none;
-    }
-
-    &__item &__label-range svg {
-      width: 32px;
-      height: 32px;
     }
 
     &__buttons {
