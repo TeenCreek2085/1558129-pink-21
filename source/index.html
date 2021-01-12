@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <title>HTML Academy: Пинк</title>
   </head>
   <body class="page-body">
@@ -53,7 +53,7 @@
           <picture>
             <source type="image/webp" media="(min-width: 1200px)" srcset="img/phone-desktop.webp 1x, img/phone-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 660px)" srcset="img/phone-tablet.webp 1x, img/phone-tablet@2x.webp 2x">
-            <source type="image/webp"  srcset="img/phone-mobile.webp 1x, img/phone-mobile@2x.webp 2x">
+            <source type="image/webp" srcset="img/phone-mobile.webp 1x, img/phone-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/phone-desktop.png 1x, img/phone-desktop@2x.png 2x">
             <source media="(min-width: 660px)" srcset="img/phone-tablet.png 1x, img/phone-tablet@2x.png 2x">
             <img src="img/phone-mobile.png" srcset="img/phone-mobile@2x.png 2x" alt="Взгляд на жизнь сквозь фильтр">
@@ -114,7 +114,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="img/iphone-desktop1.webp 1x, img/iphone-desktop1@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 660px)" srcset="img/iphone-tablet1.webp 1x, img/iphone-tablet1@2x.webp 2x">
-                  <source type="image/webp"  srcset="img/iphone-mobile1.webp 1x, img/iphone-mobile1@2x.webp 2x">
+                  <source type="image/webp" srcset="img/iphone-mobile1.webp 1x, img/iphone-mobile1@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/iphone-desktop1.png 1x, img/iphone-desktop1@2x.png 2x">
                   <source media="(min-width: 660px)" srcset="img/iphone-tablet1.png 1x, img/iphone-tablet1@2x.png 2x">
                   <img src="img/iphone-mobile1.png" srcset="img/iphone-mobile1@2x.png 2x" alt="Пример использования приложения">
@@ -128,7 +128,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="img/iphone-desktop2.webp 1x, img/iphone-desktop2@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 660px)" srcset="img/iphone-tablet2.webp 1x, img/iphone-tablet2@2x.webp 2x">
-                  <source type="image/webp"  srcset="img/iphone-mobile2.webp 1x, img/iphone-mobile2@2x.webp 2x">
+                  <source type="image/webp" srcset="img/iphone-mobile2.webp 1x, img/iphone-mobile2@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/iphone-desktop2.png 1x, img/iphone-desktop2@2x.png 2x">
                   <source media="(min-width: 660px)" srcset="img/iphone-tablet2.png 1x, img/iphone-tablet2@2x.png 2x">
                   <img src="img/iphone-mobile2.png" srcset="img/iphone-mobile2@2x.png 2x" alt="Пример использования приложения">
@@ -142,7 +142,7 @@
                 <picture>
                   <source type="image/webp" media="(min-width: 1200px)" srcset="img/iphone-desktop3.webp 1x, img/iphone-desktop3@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 660px)" srcset="img/iphone-tablet3.webp 1x, img/iphone-tablet3@2x.webp 2x">
-                  <source type="image/webp"  srcset="img/iphone-mobile3.webp 1x, img/iphone-mobile3@2x.webp 2x">
+                  <source type="image/webp" srcset="img/iphone-mobile3.webp 1x, img/iphone-mobile3@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/iphone-desktop3.png 1x, img/iphone-desktop3@2x.png 2x">
                   <source media="(min-width: 660px)" srcset="img/iphone-tablet3.png 1x, img/iphone-tablet3@2x.png 2x">
                   <img src="img/iphone-mobile3.png" srcset="img/iphone-mobile3@2x.png 2x" alt="Пример использования приложения">
@@ -279,7 +279,7 @@
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 660px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
-              <source type="image/webp"  srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
               <source media="(min-width: 660px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
               <img src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Местоположение офиса">
@@ -398,21 +398,6 @@
       </symbol>
     </svg>
 
-    <script>
-      let navMain = document.querySelector('.main-nav');
-      let navToggle = document.querySelector('.main-nav__toggle');
-
-      navMain.classList.remove('main-nav--nojs');
-
-      navToggle.addEventListener('click', function() {
-        if (navMain.classList.contains('main-nav--closed')) {
-          navMain.classList.remove('main-nav--closed');
-          navMain.classList.add('main-nav--opened');
-        } else {
-          navMain.classList.add('main-nav--closed');
-          navMain.classList.remove('main-nav--opened');
-        }
-      });
-    </script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
