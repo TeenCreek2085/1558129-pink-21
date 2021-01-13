@@ -1,5 +1,20 @@
 .contacts__box {
   text-align: center;
+  // clip-path: polygon(0 0, 48% 75%, 100% 0);
+  // background-color: red;
+  position: relative;
+
+  // &::after {
+  //   position: absolute;
+  //   content: "";
+  //   bottom: -50%;
+  //   top: 100%;
+  //   left: 0;
+  //   right: 0;
+  //   clip-path: polygon(0 0, 50% 50%, 100% 0);
+  //   background-color: red;
+  //   z-index: 10;
+  // }
 }
 
 .contacts__title {
@@ -47,6 +62,27 @@
   width: calc(100% + 40px);
   transform: translateX(-20px);
   text-align: center;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(0 0, 50% 15%, 100% 0);
+    background-color: @basic-white;
+    z-index: 10;
+
+    @media (min-width: @tablet-width) {
+      clip-path: polygon(0 0, 50% 18%, 100% 0);
+    }
+
+    @media (min-width: @desktop-width) {
+      clip-path: polygon(0 0, 50% 20%, 100% 0);
+    }
+  }
 
   @media (min-width: @desktop-width) {
     width: calc(100% + 260px);

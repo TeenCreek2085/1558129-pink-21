@@ -67,6 +67,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .reviews__slider-wrapper {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -200%);
+      content: "";
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/quotes.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
   .reviews__toggles {
     display: none;
   }
