@@ -9,12 +9,12 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 28px;
-    padding-bottom: 35px;
+    padding-bottom: 42px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 22px;
+    padding-bottom: 36px;
     background-color: transparent;
     justify-content: space-around;
   }
@@ -65,6 +65,7 @@
 
 @media (min-width: @desktop-width) {
   .main-nav__wrapper {
+    padding: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -87,9 +88,9 @@
     position: initial;
     background-color: transparent;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    column-gap: 83px;
     align-items: center;
-    margin-left: 120px;
   }
 }
 
@@ -99,14 +100,21 @@
 
   @media (min-width: @desktop-width) {
     &--current a {
-      border-bottom: 2px solid @basic-white;
+      // border-bottom: 2px solid @basic-white;
+      background: linear-gradient(@basic-white, @basic-white) no-repeat;
+      background-size: 100% 2px;
+      background-position: bottom;
+    }
+
+    &:last-child {
+      margin-right: 5px;
     }
   }
 }
 
 .main-nav__item a {
   display: block;
-  padding-top: 15px;
+  padding-top: 17px;
   padding-bottom: 15px;
   color: @basic-white;
   text-decoration: none;
@@ -120,7 +128,7 @@
   }
 
   &:active {
-    color: fade(@basic-white, 30%);
+    color: fade(@pink, 30%);
   }
 }
 
@@ -128,7 +136,7 @@
 .main-nav__toggle {
   position: absolute;
   top: 50%;
-  right: 3%;
+  right: 6%;
   transform: translateY(-50%);
   z-index: 2;
   display: block;
@@ -137,13 +145,17 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    right: 3%;
+  }
 }
 
 // Кнопка, когда меню закрыто
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 1px;
   right: 0;
   width: 50px;
   height: 4px;
@@ -152,10 +164,20 @@
   box-shadow: 0 8px 0 0 @basic-white, 0 16px 0 0 @basic-white;
 }
 
+.main-nav--closed .main-nav__toggle:hover::before {
+  background-color: @pink;
+  box-shadow: 0 8px 0 0 @pink, 0 16px 0 0 @pink;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@pink, 30%);
+  box-shadow: 0 8px 0 0 fade(@pink, 30%), 0 16px 0 0 fade(@pink, 30%);
+}
+
 // Крестик, когда меню открыто
 .main-nav--opened .main-nav__toggle {
   top: 50%;
-  right: 5%;
+  right: 16%;
   width: 25px;
 
   &::before,
@@ -218,6 +240,7 @@
   }
 
   .main-nav__item a {
+    padding: 23px 0 12px;
     font-weight: normal;
     line-height: 18px;
     text-transform: capitalize;

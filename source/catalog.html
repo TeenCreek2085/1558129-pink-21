@@ -44,7 +44,7 @@
         </nav>
       </div>
 
-      <div class="header-title container">
+      <div class="header-title header-title--catalog container">
         <p class="header-title__slogan">Фотографии пользователей</p>
       </div>
     </header>
@@ -54,7 +54,7 @@
 
       <section class="page-description">
         <div class="page-description__wrapper container">
-          <div class="page-description__intro">
+          <div class="page-description__intro page-description__intro--catalog">
             <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
           </div>
         </div>
@@ -257,11 +257,13 @@
         </div>
 
         <div class="catalog__intro container">
-          <p>Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+          <p>Затмите их всех!</p>
+          <p>Выкладывайте все, что накопилось в телефоне!</p>
         </div>
       </section>
 
       <section class="filter">
+        <h2 class="visually-hidden">Фильтр фотографий</h2>
         <div class="filter__wrapper container">
           <form class="filter__form" action="https://echo.htmlacademy.ru" method="POST">
             <div class="filter__left">
@@ -308,8 +310,8 @@
               </fieldset>
               <fieldset class="filter__box">
                 <div class="filter__buttons">
-                  <button class="filter__button button button--submit" type="submit">Запостить</button>
-                  <button class="filter__button button button--reset" type="reset">Отмена</button>
+                  <button class="filter__button button button--submit" aria-label="Сохранить настройки фильтра и поделиться фотографией" type="submit">Запостить</button>
+                  <button class="filter__button button button--reset" aria-label="Сбросить настройки фильтра" type="reset">Отмена</button>
                 </div>
               </fieldset>
             </div>
@@ -362,7 +364,7 @@
 
         <div class="page-footer__copyright copyright">
           <div class="copyright__text">Разработано</div>
-          <a href="https://htmlacademy.ru/intensive/adaptive">
+          <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу с интенсивами организации">
             <svg class="copyright__logo" width="27" height="34">
               <use xlink:href="#icon-htmlacademy"></use>
             </svg>

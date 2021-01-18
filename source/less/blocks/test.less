@@ -11,6 +11,7 @@
     display: flex;
     align-items: center;
     column-gap: 72px;
+    margin-top: 55px;
     margin-bottom: 100px;
   }
 }
@@ -23,7 +24,9 @@
   .test__title {
     padding: 0;
     margin: 0;
-    margin-bottom: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    max-width: 60%;
     color: @basic-black;
     font-size: 30px;
     line-height: 36px;
@@ -32,8 +35,10 @@
 
   .test__text {
     padding: 0;
-    margin-bottom: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
     font-size: 14px;
+    max-width: 95%;
   }
 
   .test__link {
@@ -43,23 +48,37 @@
 }
 
 @media (min-width: @desktop-width) {
+  .test__wrapper {
+    padding: 0;
+  }
+
   .test__item {
     position: relative;
-    margin-bottom: 190px;
+    margin-bottom: 184px;
+    margin-top: 0;
+    padding-top: 48px;
+    padding-bottom: 66px;
   }
 
   .test__item img {
-    width: 298px;
-    height: 345px;
+    width: 600px;
+    height: auto;
   }
 
   .test__title {
-    margin-bottom: 37px;
+    margin-top: 50px;
+    margin-bottom: 25px;
     line-height: 30px;
+    max-width: 100%;
   }
 
   .test__text {
-    margin-bottom: 47px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .test__link {
     font-size: 18px;
     line-height: 30px;
   }

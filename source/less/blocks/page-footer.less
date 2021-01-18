@@ -1,5 +1,4 @@
 .page-footer__wrapper {
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,8 +7,16 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 15px;
 }
 
 .page-footer__svg {
@@ -38,5 +45,13 @@
     @media (min-width: @desktop-width) {
       display: block;
     }
+  }
+}
+
+.page-footer__social {
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
   }
 }

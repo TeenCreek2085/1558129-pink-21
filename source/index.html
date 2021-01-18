@@ -13,7 +13,7 @@
       <div class="header-top">
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <div class="main-nav__wrapper container">
-            <a class="main-nav__logo">
+            <a class="main-nav__logo" href="#">
               <svg class="main-nav__svg main-nav__svg--desktop" width="147" height="40">
                 <use xlink:href="#logo-desktop"></use>
               </svg>
@@ -62,26 +62,26 @@
         </div>
 
         <div class="header-download">
-          <button class="header-download__button" type="button">Скачать приложение</button>
+          <button class="header-download__button" type="button" aria-label="Скачать приложение себе на устройство">Скачать приложение</button>
 
           <div class="header-download__icon-box">
             <ul class="header-download__icon-list">
               <li class="header-download__icon-item">
-                <a class="header-download__icon-link" href="#">
+                <a class="header-download__icon-link" href="https://www.apple.com/app-store/">
                   <span class="visually-hidden">Apple</span>
-                  <img src="img/apple-logo.svg" width="47" height="56" alt="Приложение для IOS">
+                  <img src="img/apple-logo.svg" width="47" height="56" aria-label="скачать приложения для Iphone" alt="Приложение для IOS">
                 </a>
               </li>
               <li class="header-download__icon-item">
-                <a class="header-download__icon-link" href="#">
+                <a class="header-download__icon-link" href="https://play.google.com/store?hl=ru&gl=US">
                   <span class="visually-hidden">Android</span>
-                  <img src="img/android-logo.svg" width="43" height="47" alt="Приложение для Android">
+                  <img src="img/android-logo.svg" width="43" height="47" aria-label="скачать приложения для Android" alt="Приложение для Android">
                 </a>
               </li>
               <li class="header-download__icon-item">
-                <a class="header-download__icon-link" href="#">
+                <a class="header-download__icon-link" href="https://www.microsoft.com/ru-RU/store/apps">
                   <span class="visually-hidden">Microsoft</span>
-                  <img src="img/microsoft-logo.svg" width="44" height="41" alt="Приложение для Windows phone">
+                  <img src="img/microsoft-logo.svg" width="44" height="41" aria-label="скачать приложения для Windows phone" alt="Приложение для Windows phone">
                 </a>
               </li>
             </ul>
@@ -163,17 +163,18 @@
             <div class="test__box">
               <h3 class="test__title">Эффект на 24 часа!</h3>
               <p class="test__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-              <a class="test__link" href="#">Узнать больше об исследовании</a>
+              <a class="test__link" href="#" aria-label="Перейти на статью об исследовании приложения">Узнать больше об исследовании</a>
             </div>
           </div>
         </div>
       </section>
 
+
       <section class="reviews">
         <div class="reviews__wrapper container slider">
           <h2 class="visually-hidden">Отзывы о нас</h2>
 
-          <div class="reviews__slider-wrapper slider__wrapper container">
+          <div class="reviews__slider-wrapper slider__wrapper">
             <ul class="reviews__list slider__list">
               <li class="reviews__item slider__item slider__item--current">
                 <blockquote class="reviews__box">
@@ -200,8 +201,8 @@
           </div>
 
           <div class="slider__buttons-big">
-            <button class="slider__button slider__button--prev"></button>
-            <button class="slider__button slider__button--next"></button>
+            <button class="slider__button slider__button--prev" aria-label="Переключение слайда вперед"></button>
+            <button class="slider__button slider__button--next" aria-label="Переключение слайда назад"></button>
           </div>
 
           <div class="reviews__toggles slider__toggles">
@@ -264,11 +265,11 @@
           <div class="contacts__box">
             <div class="contacts__item">
               <p class="contacts__text">Звоните</p>
-              <p class="contacts__phone"><a href="tel:+78125556666">+7 (812) 555-66-66</a></p>
+              <p class="contacts__phone"><a href="tel:+78125556666" aria-label="Мобильный номер телефона организации">+7 (812) 555-66-66</a></p>
             </div>
             <div class="contacts__item">
               <p class="contacts__text">Пишите</p>
-              <p class="contacts__email"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+              <p class="contacts__email"><a href="mailto:mail@htmlacademy.ru" aria-label="Почтовый яцик организации">mail@htmlacademy.ru</a></p>
             </div>
             <div class="contacts__item">
               <p class="contacts__text">Приезжайте в гости:</p>
@@ -277,14 +278,7 @@
           </div>
 
           <div class="contacts__map">
-            <picture>
-              <source type="image/webp" media="(min-width: 1200px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 660px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x">
-              <source media="(min-width: 1200px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
-              <source media="(min-width: 660px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
-              <img src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Местоположение офиса">
-            </picture>
+            <iframe src="https://www.google.ru/maps/d/embed?mid=1NiERkeAQxdjzrdMQ0gcSNCqIagpv5r_j&hl=ru" width="280" height="200" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" title="Местоположение нашего офиса"></iframe>
           </div>
         </div>
       </section>
@@ -334,7 +328,7 @@
 
         <div class="page-footer__copyright copyright">
           <div class="copyright__text">Разработано</div>
-          <a href="https://htmlacademy.ru/intensive/adaptive">
+          <a href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на страницу с интенсивами организации">
             <svg class="copyright__logo" width="27" height="34">
               <use xlink:href="#icon-htmlacademy"></use>
             </svg>

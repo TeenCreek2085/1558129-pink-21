@@ -1,12 +1,16 @@
 .copyright {
   display: flex;
-  column-gap: 20px;
+  column-gap: 17px;
   align-items: center;
 }
 
 .copyright__text {
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 5px;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
