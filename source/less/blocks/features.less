@@ -181,6 +181,20 @@
     height: 301px;
     overflow: hidden;
     order: 1;
+    z-index: 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 17px;
+      bottom: 274px;
+      right: -15%;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 49.8%, rgba(0, 0, 0, 0) 93.23%);
+      opacity: 0.4;
+      filter: blur(4px);
+      z-index: -2;
+    }
   }
 
   .features__item:not(:last-child) .features__image {
