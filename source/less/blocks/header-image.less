@@ -1,17 +1,13 @@
 .header-image img {
   display: block;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     position: absolute;
     bottom: 0;
     right: 0;
   }
 
-  @media (min-width: @desktop-width) {
-    right: -24%;
+  @media @desktop {
+    right: -10%;
   }
-}
-
-.page-header__wrapper {
-  position: relative;
 }

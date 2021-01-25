@@ -7,12 +7,12 @@
     background-color: fade(@blue, 100%);
   }
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     padding-top: 28px;
     padding-bottom: 42px;
   }
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     padding-top: 22px;
     padding-bottom: 36px;
     background-color: transparent;
@@ -21,8 +21,8 @@
 }
 
 .main-nav__svg {
-  fill: @basic-white;
-  color: @basic-white;
+  fill: @white;
+  color: @white;
 
   &:hover {
     fill: @pink;
@@ -30,14 +30,14 @@
   }
 
   &:active {
-    fill: fade(@basic-white, 30%);
-    color: fade(@basic-white, 30%);
+    fill: fade(@white, 30%);
+    color: fade(@white, 30%);
   }
 
   &--mobile {
     display: block;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       display: none;
     }
   }
@@ -45,11 +45,11 @@
   &--tablet {
     display: none;
 
-    @media (min-width: @tablet-width) {
+    @media @tablet {
       display: block;
     }
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       display: none;
     }
   }
@@ -57,13 +57,13 @@
   &--desktop {
     display: none;
 
-    @media (min-width: @desktop-width) {
+    @media @desktop {
       display: block;
     }
   }
 }
 
-@media (min-width: @desktop-width) {
+@media @desktop {
   .main-nav__wrapper {
     padding: 0;
     display: flex;
@@ -84,7 +84,7 @@
   background-color: @blue;
   z-index: 10;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     position: initial;
     background-color: transparent;
     display: flex;
@@ -96,12 +96,12 @@
 
 .main-nav__item {
   box-shadow: @box-shadow;
-  border-top: 1px solid @basic-black;
+  border-top: 1px solid @black;
 
-  @media (min-width: @desktop-width) {
+  @media @desktop {
     &--current a {
-      // border-bottom: 2px solid @basic-white;
-      background: linear-gradient(@basic-white, @basic-white) no-repeat;
+      // border-bottom: 2px solid @white;
+      background: linear-gradient(@white, @white) no-repeat;
       background-size: 100% 2px;
       background-position: bottom;
     }
@@ -116,9 +116,10 @@
   display: block;
   padding-top: 17px;
   padding-bottom: 15px;
-  color: @basic-white;
+  color: @white;
   text-decoration: none;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
   text-transform: uppercase;
   line-height: 32px;
   text-align: center;
@@ -129,6 +130,11 @@
 
   &:active {
     color: fade(@pink, 30%);
+  }
+
+  @media @desktop {
+    font-weight: 400;
+    line-height: 18px;
   }
 }
 
@@ -146,7 +152,7 @@
   border: none;
   background-color: transparent;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
     right: 3%;
   }
 }
@@ -160,24 +166,24 @@
   width: 50px;
   height: 4px;
   border-radius: 1px;
-  background-color: @basic-white;
-  box-shadow: 0 8px 0 0 @basic-white, 0 16px 0 0 @basic-white;
+  background-color: @white;
+  box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
 }
 
 .main-nav--closed .main-nav__toggle:hover::before {
   background-color: @pink;
-  box-shadow: 0 8px 0 0 @pink, 0 16px 0 0 @pink;
+  box-shadow: 0 10px 0 0 @pink, 0 20px 0 0 @pink;
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
   background-color: fade(@pink, 30%);
-  box-shadow: 0 8px 0 0 fade(@pink, 30%), 0 16px 0 0 fade(@pink, 30%);
+  box-shadow: 0 10px 0 0 fade(@pink, 30%), 0 20px 0 0 fade(@pink, 30%);
 }
 
 // Крестик, когда меню открыто
 .main-nav--opened .main-nav__toggle {
   top: 50%;
-  right: 16%;
+  right: 4%;
   width: 25px;
 
   &::before,
@@ -188,7 +194,7 @@
     right: 0;
     width: 25px;
     height: 3px;
-    background-color: @basic-white;
+    background-color: @white;
   }
 
   &::before {
@@ -229,7 +235,7 @@
   }
 }
 
-@media (min-width: @desktop-width) {
+@media @desktop {
   .main-nav__toggle {
     display: none;
   }

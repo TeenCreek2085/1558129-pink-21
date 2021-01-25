@@ -1,66 +1,125 @@
 .header-title {
-  margin-bottom: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 79px;
   margin-top: 29px;
-  color: @basic-white;
-  font-weight: lighter;
+  color: @white;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 32.68px;
   text-align: center;
+  font-weight: 300;
 
-  @media (min-width: @tablet-width) {
-    margin-top: 68px;
-    margin-bottom: 59px;
+  @media @tablet {
+    margin-top: 69px;
+    margin-bottom: 126px;
     font-size: 50px;
     line-height: 68.09px;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: 89px;
-    margin-top: 58px;
-    max-width: 100%;
+.header-title--home {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 29px;
+  line-height: 28.8px;
+  z-index: 100;
+  position: relative;
+
+  .br-header--tablet {
+    display: none;
   }
 
-  &--home {
-    position: relative;
-    line-height: 28.8px;
-    margin-top: 24px;
-    margin-bottom: 30px;
+  @media @tablet {
+    margin-bottom: 29px;
+    justify-content: flex-start;
+    max-width: 50%;
+    font-size: 40px;
+    line-height: 48px;
 
-    @media (min-width: @tablet-width) {
-      margin-top: 95px;
-      margin-bottom: 32px;
-      max-width: 49%;
+    .br-header--tablet {
+      display: block;
+    }
+
+    p {
+      margin: 0;
+      width: 300px;
       font-size: 40px;
       line-height: 48px;
     }
+  }
 
-    @media (min-width: @desktop-width) {
-      margin-left: 9px;
-      margin-top: 98px;
-      margin-bottom: 37px;
-      max-width: 45%;
+  @media @desktop {
+    margin-bottom: 36px;
+    max-width: 45%;
+    font-size: 50px;
+    line-height: 68.09px;
+
+    p {
+      width: 300px;
       font-size: 50px;
       line-height: 68.09px;
     }
   }
+}
 
-  &--catalog {
-    margin-bottom: 79px;
+.header-title--form {
+  padding-top: 35px;
+  padding-bottom: 44px;
+  z-index: 100;
 
-    @media (min-width: @tablet-width) {
-      margin-bottom: 128px;
-    }
+  @media @tablet {
+    padding-top: 69px;
+    padding-bottom: 60px;
+    font-size: 50px;
+    line-height: 68.09px;
+  }
 
-    @media (min-width: @desktop-width) {
-      margin-bottom: 88px;
-      max-width: 70%;
+  @media @desktop {
+    padding-top: 58px;
+    padding-bottom: 90px;
+  }
+}
+
+.header-title--catalog {
+  padding-top: 35px;
+  padding-bottom: 76px;
+  z-index: 100;
+
+  .br-head-catalog--desktop {
+    display: none;
+  }
+
+  @media @tablet {
+    padding-top: 69px;
+    padding-bottom: 128px;
+    font-size: 50px;
+    line-height: 68.09px;
+  }
+
+  @media @desktop {
+    padding-top: 58px;
+    padding-bottom: 90px;
+
+    .br-head-catalog--desktop {
+      display: block;
     }
   }
 }
 
+@media @desktop {
+  .br-1 {
+    display: none;
+  }
+}
+
 .header-title--home .header-title__slogan {
-  max-width: 80%;
   margin: 0 auto;
+
+  @media @tablet {
+    max-width: 75%;
+  }
 }
 
 .header-title__slogan {

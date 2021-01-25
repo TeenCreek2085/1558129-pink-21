@@ -1,85 +1,94 @@
 .test {
-  @media (min-width: @desktop-width) {
-    background-color: @gray;
-  }
-}
-
-.test__item {
   display: none;
 
-  @media (min-width: @tablet-width) {
+  @media @tablet {
+    display: block;
+  }
+
+  @media @desktop {
+    background-color: @silver;
+  }
+}
+
+.test__wrapper {
+  display: none;
+  margin: 0 auto;
+  padding: 60px 20px 72px;
+
+  @media @tablet {
     display: flex;
-    align-items: center;
-    column-gap: 72px;
-    margin-top: 55px;
-    margin-bottom: 100px;
+    justify-content: flex-end;
+    padding: 62px 20px 72px;
+  }
+
+  @media @desktop {
+    padding: 20px 10px 111px;
+    width: 940px;
   }
 }
 
-@media (min-width: @tablet-width) {
-  .test__box {
-    text-align: left;
-  }
+.test__box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 50%;
+  position: relative;
+  margin-top: 11px;
 
-  .test__title {
-    padding: 0;
-    margin: 0;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    max-width: 60%;
-    color: @basic-black;
-    font-size: 30px;
-    line-height: 36px;
-    font-weight: bold;
-  }
-
-  .test__text {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 14px;
-    max-width: 95%;
-  }
-
-  .test__link {
-    color: @pink;
-    font-size: 14px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .test__wrapper {
-    padding: 0;
-  }
-
-  .test__item {
-    position: relative;
-    margin-bottom: 184px;
-    margin-top: 0;
-    padding-top: 48px;
-    padding-bottom: 66px;
-  }
-
-  .test__item img {
-    width: 600px;
-    height: auto;
-  }
-
-  .test__title {
-    margin-top: 50px;
-    margin-bottom: 25px;
+  @media @desktop {
+    margin-top: 65px;
+    width: 570px;
+    font-size: 18px;
     line-height: 30px;
     max-width: 100%;
   }
 
-  .test__text {
-    margin-bottom: 30px;
-    font-size: 18px;
-    line-height: 30px;
-  }
+  &::before {
+    position: absolute;
+    right: 123.3%;
+    top: -7.8%;
+    content: "";
+    width: 238px;
+    height: 276px;
+    background: url("../img/icons/logo-timer.svg") no-repeat center;
+    background-size: contain;
 
-  .test__link {
-    font-size: 18px;
-    line-height: 30px;
+    @media @desktop {
+      top: -29%;
+      right: 112.5%;
+      width: 298px;
+      height: 345px;
+    }
   }
+}
+
+.test__title {
+  margin-top: 23px;
+  margin-bottom: 0;
+  width: 200px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: @black;
+
+  @media @desktop {
+    margin-top: 24px;
+    margin-bottom: 22px;
+    width: auto;
+  }
+}
+
+.test__text {
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-bottom: 11px;
+
+  @media @desktop {
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.test__link {
+  color: @pink;
 }

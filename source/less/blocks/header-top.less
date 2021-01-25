@@ -1,7 +1,21 @@
 .header-top {
-  background-color: fade(@basic-black, 30%);
+  background-color: fade(@black, 30%);
+}
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 50px;
+.header-image img {
+  display: block;
+
+  @media @tablet {
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
+
+  @media @desktop {
+    right: 0;
+  }
+}
+
+.page-header__wrapper {
+  position: relative;
 }
