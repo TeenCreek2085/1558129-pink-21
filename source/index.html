@@ -11,9 +11,9 @@
   </head>
 
   <body class="page">
-    <header class="page-header">
+    <header class="page-header page-header--home">
       <div class="header-top">
-        <nav class="main-nav main-nav--closed main-nav--nojs container">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
           <div class="main-nav__wrapper">
             <a class="main-nav__logo" href="#">
               <svg class="main-nav__svg main-nav__svg--desktop" width="147" height="40">
@@ -31,7 +31,7 @@
             </button>
             <ul class="main-nav__list">
               <li class="main-nav__item main-nav__item--current">
-                <a>Главная</a>
+                <a href="#">Главная</a>
               </li>
               <li class="main-nav__item">
                 <a href="catalog.html">Фотографии</a>
@@ -47,7 +47,7 @@
         </nav>
       </div>
 
-      <div class="page-header__wrapper container">
+      <div class="page-header__wrapper page-header__wrapper--home">
         <div class="header-title header-title--home">
           <p class="header-title__slogan">Взгляните на жизнь иначе!</p>
         </div>
@@ -143,42 +143,44 @@
         </div>
       </section>
 
-      <section class="reviews container">
-        <h2 class="visually-hidden">Отзывы</h2>
+      <section class="reviews">
+        <div class="reviews__wrapper container">
+          <h2 class="visually-hidden">Отзывы</h2>
 
-        <div class="reviews__slide reviews__slide--current">
-          <blockquote class="reviews__box">
-            <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-          </blockquote>
-          <p class="reviews__author">Николай Петров</p>
-          <p class="reviews__job">25 лет, водитель трамвая</p>
-        </div>
+          <div class="reviews__slide reviews__slide--current">
+            <blockquote class="reviews__box">
+              <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <p class="reviews__author">Николай Петров</p>
+            <p class="reviews__job">25 лет, водитель трамвая</p>
+          </div>
 
-        <div class="reviews__slide">
-          <blockquote class="reviews__box">
-            <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-          </blockquote>
-          <p class="reviews__author">Николай Петров</p>
-          <p class="reviews__job">25 лет, водитель трамвая</p>
-        </div>
+          <div class="reviews__slide">
+            <blockquote class="reviews__box">
+              <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <p class="reviews__author">Николай Петров</p>
+            <p class="reviews__job">25 лет, водитель трамвая</p>
+          </div>
 
-        <div class="reviews__slide">
-          <blockquote class="reviews__box">
-            <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
-          </blockquote>
-          <p class="reviews__author">Николай Петров</p>
-          <p class="reviews__job">25 лет, водитель трамвая</p>
-        </div>
+          <div class="reviews__slide">
+            <blockquote class="reviews__box">
+              <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
+            </blockquote>
+            <p class="reviews__author">Николай Петров</p>
+            <p class="reviews__job">25 лет, водитель трамвая</p>
+          </div>
 
-        <div class="reviews__toggles slider-controls">
-          <button class="slider-controls__button slider-controls__button--current" type="button" aria-label="Первый слайд"></button>
-          <button class="slider-controls__button" type="button" aria-label="Второй слайд"></button>
-          <button class="slider-controls__button" type="button" aria-label="Третий слайд"></button>
-        </div>
+          <div class="reviews__toggles slider-controls">
+            <button class="slider-controls__button slider-controls__button--current" type="button" aria-label="Первый слайд"></button>
+            <button class="slider-controls__button" type="button" aria-label="Второй слайд"></button>
+            <button class="slider-controls__button" type="button" aria-label="Третий слайд"></button>
+          </div>
 
-        <div class="reviews__slider-nav slider-nav">
-          <button class="slider-nav__slider-button slider-nav__slider-button--prev" type="button" aria-label="Переключение слайда назад"></button>
-          <button class="slider-nav__slider-button slider-nav__slider-button--next" type="button" aria-label="Переключение слайда вперед"></button>
+          <div class="reviews__slider-nav slider-nav">
+            <button class="slider-nav__slider-button slider-nav__slider-button--prev" type="button" aria-label="Переключение слайда назад"></button>
+            <button class="slider-nav__slider-button slider-nav__slider-button--next" type="button" aria-label="Переключение слайда вперед"></button>
+          </div>
         </div>
       </section>
 
@@ -364,7 +366,7 @@
 
         <div class="page-footer__copyright">
           <span class="page-footer__copyright-text">Разработано</span>
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Логотип HTML Academy">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Перейти на сайт HTML Academy">
             <svg class="page-footer__copyright-icon" width="27" height="34">
               <use xlink:href="#icon-htmlacademy"></use>
             </svg>

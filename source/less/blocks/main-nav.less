@@ -1,11 +1,7 @@
 .main-nav {
-  position: relative;
+  // position: relative;
   padding-top: 21px;
   padding-bottom: 21px;
-
-  &--opened {
-    background-color: fade(@blue, 100%);
-  }
 
   @media @tablet {
     padding-top: 28px;
@@ -17,6 +13,35 @@
     padding-bottom: 36px;
     background-color: transparent;
     justify-content: space-around;
+  }
+
+  &--opened,
+  &--nojs {
+    background-color: fade(@blue, 100%);
+    padding-bottom: 0;
+  }
+}
+
+.main-nav--opened .main-nav__list,
+.main-nav--nojs .main-nav__list {
+  padding-top: 24px;
+
+  @media @tablet {
+    padding-top: 42px;
+  }
+}
+
+.main-nav__wrapper {
+  position: relative;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+
+  @media @desktop {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
   }
 }
 
@@ -63,21 +88,16 @@
   }
 }
 
-@media @desktop {
-  .main-nav__wrapper {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
+// @media @desktop {
+//   .main-nav__wrapper {
+//     padding: 0;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
+// }
 
 .main-nav__list {
-  position: absolute;
-  width: 100%;
-  top: 100%;
-  left: 0;
-  right: 0;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -85,11 +105,11 @@
   z-index: 10;
 
   @media @desktop {
-    position: initial;
     background-color: transparent;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
-    column-gap: 83px;
+    column-gap: 79px;
     align-items: center;
   }
 }
@@ -107,7 +127,7 @@
     }
 
     &:last-child {
-      margin-right: 5px;
+      margin-right: 9px;
     }
   }
 }
@@ -115,7 +135,7 @@
 .main-nav__item a {
   display: block;
   padding-top: 17px;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
   color: @white;
   text-decoration: none;
   font-size: 18px;
@@ -124,17 +144,19 @@
   line-height: 32px;
   text-align: center;
 
+  @media @tablet {
+    padding-top: 15px;
+    padding-bottom: 16px;
+    // font-weight: 400;
+    // line-height: 18px;
+  }
+
   &:hover {
     color: @pink;
   }
 
   &:active {
     color: fade(@pink, 30%);
-  }
-
-  @media @desktop {
-    font-weight: 400;
-    line-height: 18px;
   }
 }
 
@@ -154,6 +176,7 @@
 
   @media @tablet {
     right: 3%;
+    top: 65%;
   }
 }
 
@@ -161,7 +184,7 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 1px;
+  top: 0;
   right: 0;
   width: 50px;
   height: 4px;
@@ -182,17 +205,17 @@
 
 // Крестик, когда меню открыто
 .main-nav--opened .main-nav__toggle {
-  top: 50%;
-  right: 4%;
-  width: 25px;
+  top: 11px;
+  right: 5%;
+  width: 30px;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 50%;
     right: 0;
-    width: 25px;
+    width: 30px;
     height: 3px;
     background-color: @white;
   }
@@ -214,24 +237,24 @@
   &:active::after {
     background-color: fade(@pink, 30%);
   }
-}
 
-.main-nav--nojs .main-nav__toggle {
-  display: none;
-}
-
-.main-nav--nojs .main-nav__wrapper {
-  position: static;
-  min-height: 0;
-}
-
-.main-nav--nojs .main-nav__item {
-  display: block;
+  @media @tablet {
+    top: 25px;
+    right: 2.5%;
+  }
 }
 
 @media (max-width: @only-tablet-width) {
   .main-nav--closed .main-nav__list {
     display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
   }
 }
 
@@ -247,8 +270,18 @@
 
   .main-nav__item a {
     padding: 23px 0 12px;
-    font-weight: normal;
+    font-weight: 400;
     line-height: 18px;
     text-transform: capitalize;
+  }
+}
+
+.main-nav__logo {
+  width: 74px;
+  margin-left: 20px;
+
+  @media @desktop {
+    margin-bottom: 3px;
+    margin-left: 8px;
   }
 }

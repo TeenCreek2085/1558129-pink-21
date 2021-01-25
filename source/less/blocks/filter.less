@@ -11,12 +11,17 @@
 
 .filter__title {
   margin-top: 0;
-  margin-bottom: 66px;
+  margin-bottom: 42px;
   line-height: 30px;
   text-align: center;
 
   @media @tablet {
     font-size: 18px;
+    margin-bottom: 70px;
+  }
+
+  @media @desktop {
+    margin-bottom: 68px;
   }
 }
 
@@ -28,8 +33,7 @@ input {
 .filter__wrapper {
   background-color: @silver;
   padding-top: 20px;
-  padding-bottom: 40px;
-  margin-bottom: 28px;
+  padding-bottom: 41px;
 }
 
 .filter__box {
@@ -64,7 +68,7 @@ input {
 
 .filter__buttons {
   position: relative;
-  margin-top: 9px;
+  margin-top: 13px;
   padding-top: 40px;
 }
 
@@ -111,8 +115,8 @@ input {
 @media @tablet {
   .filter__wrapper {
     padding-top: 57px;
-    padding-bottom: 54px;
-    margin-bottom: 17px;
+    padding-bottom: 55px;
+    // margin-bottom: 17px;
   }
 
   .filter__form {
@@ -184,6 +188,8 @@ input {
 
   .filter__buttons {
     margin-top: 0;
+    width: 101%;
+    // margin-left: 5px;
   }
 
   .filter__buttons::before {
@@ -191,7 +197,7 @@ input {
   }
 
   .filter__button ~ .filter__button {
-    margin-top: 26px;
+    margin-top: 26.5px;
   }
 
   .filter__crop {
@@ -255,6 +261,6 @@ input {
 
   .filter__wrapper {
     padding: 57px 40px 57px 80px;
-    margin-bottom: 82px;
+    margin-bottom: 28px;
   }
 }

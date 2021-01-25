@@ -17,14 +17,14 @@
   background-color: @blue;
 
   @media @tablet {
-    padding-top: 13px;
-    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-bottom: 10px;
     padding-left: 4px;
   }
 
   @media @desktop {
     padding-top: 16px;
-    padding-bottom: 22px;
+    padding-bottom: 21px;
   }
 
   &:first-child {
@@ -43,21 +43,24 @@
   }
 
   &--hit {
+    position: relative;
+
     background-image: url("../img/bg-hit.svg");
-    background-size: image-size("../img/bg-hit.svg");
     background-position: 0 0;
+    background-size: 74px;
     background-repeat: no-repeat;
 
     @media @tablet {
       background-image: url("../img/bg-hit-tablet.svg");
-      background-size: image-size("../img/bg-hit-tablet.svg");
+      background-size: 61px;
     }
 
     @media @desktop {
       background-image: url("../img/bg-hit.svg");
-      background-size: image-size("../img/bg-hit.svg");
+      background-size: 74px;
     }
   }
+
 
   &--hit::before {
     content: attr(data-hit-text);
@@ -92,8 +95,13 @@
   font-size: 16px;
   line-height: 30px;
 
+  @media @tablet {
+    margin-bottom: 2px;
+  }
+
   @media @desktop {
     font-size: 18px;
+    margin-bottom: 1px;
   }
 }
 
@@ -115,7 +123,7 @@
 }
 
 .table__kit {
-  padding: 15px 18px 14px 22px;
+  padding: 15px 17px 14px 22px;
   border-right: 2px solid @lightgray;
   border-bottom: 2px solid @lightgray;
   background-color: @white;
@@ -135,7 +143,7 @@
 
     @media @tablet {
       display: table-cell;
-      padding-left: 14px;
+      padding-left: 15px;
       padding-right: 14px;
       text-transform: none;
     }
@@ -174,7 +182,7 @@
 
   &--true {
     width: 31px;
-    height: 23px;
+    height: 21px;
     background-image: url("../img/icons/icon-yes.svg");
   }
 

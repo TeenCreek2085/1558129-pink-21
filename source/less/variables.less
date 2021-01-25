@@ -8,14 +8,14 @@
 @tablet-min-width: (@tablet-width + 1);
 @tablet-max-width: (@desktop-width - 1);
 
-// @retina-dpi: 144dpi;
+@retina-dpi: 144dpi;
 
 @tablet: ~"(min-width: @{tablet-width})";
 @desktop: ~"(min-width: @{desktop-width})";
 
 @tablet-only: ~"(min-width: @{tablet-min-width}) and (max-width: @{tablet-max-width})";
 
-// @retina: ~"(min-resolution: @{retina-dpi})";
+@retina: ~"(min-resolution: @{retina-dpi})";
 
 @font-family-base: "Open Sans", "Arial", sans-serif;
 @font-size-base: 14px;
