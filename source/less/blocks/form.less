@@ -521,6 +521,8 @@
 
 .form__checkbox {
   // &:focus + .form__label-checkbox {
+  //   outline: 1px dashed @pink;
+  //   outline-offset: 2px;
   // }
 
   &:checked + .form__label-checkbox {
@@ -571,4 +573,29 @@
   @media @desktop {
     min-height: 128px;
   }
+}
+
+.form__checkbox:focus + .form__label-checkbox::before {
+  border: 2px solid @blue;
+}
+
+.form__checkbox:focus:active + .form__label-checkbox::before {
+  border: 2px solid @pink;
+}
+
+
+.form__radio:focus + .form__label-radio::before {
+  border: 2px solid @blue;
+}
+
+.form__radio:focus:active + .form__label-radio::before {
+  border: 2px solid @pink;
+}
+
+.form__radio:not(:checked):focus + .form__label-radio::before {
+  border: 2px solid @blue;
+}
+
+.form__radio:not(:checked):focus:active + .form__label-radio::before {
+  border: 2px solid @pink;
 }
